@@ -21,7 +21,6 @@ function Login() {
 
   if(email && password)
   {
-
     const response = await fetch("http://localhost:1337/api/login", {
       method: "POST",
       headers: {
@@ -41,7 +40,8 @@ function Login() {
     //   alert("Login successful");
       history.replace("/home");
     } else {
-      setError({...error,setErrorInHeader:'Please Enter Valid User Name and Password',emailError:'',passwordError:''});
+      console.log("in else");
+      setError({...error,setErrorInHeader:'Invalid User Name or Password',emailError:'',passwordError:''});
       // if
       // alert("Please check your username and password");
     }

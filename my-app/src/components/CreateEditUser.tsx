@@ -19,6 +19,7 @@ function CreateUser({ userAction, selectedRecord, users, setAllUser }: { userAct
       setCreateNewUser({ id: idNew, userId: userIdNew, title: titleNew, body: bodyNew })
 
     return () => {
+      setCreateNewUser({ id: '', userId: '', title: '', body: '' })
     }
   }, [selectedRecord])
 
